@@ -4,7 +4,7 @@ Xft.antialias: true
 Xft.rgba: rgb
 Xft.hinting: true
 Xft.hintstyle: autohint
-Xft.lcdfilter: lcdlight
+Xft.lcdfilter: lcddefault
 ! URxvt
 URxvt.scrollBar: false
 URxvt.loginShell: true

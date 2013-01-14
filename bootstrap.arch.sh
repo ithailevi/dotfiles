@@ -1,12 +1,15 @@
+export http_proxy=
+# git clone https://github.com/L3V3L9/dotfiles.git
 # core
-pacman -S tmux xorg-server xorg-xinit xorg-server-utils dwm xterm urxvt rxvt-unicode dmenu xf86-video-ati
+sudo http_proxy= pacman -S tmux xorg-server xorg-xinit xorg-server-utils dwm xterm zsh rxvt-unicode dmenu 
 # apps
-pacman -S chromium  mutt ranger openssh cmus cifs-utils alsa-utils unzip mplayer axel htop youtube-viewer cmatrix newsbeuter ntfs-3g wget
+sudo http_proxy= pacman -S chromium mutt ranger openssh cmus cifs-utils alsa-utils unzip mplayer axel htop youtube-viewer cmatrix newsbeuter ntfs-3g wget
 # dev
-pacman -S git gcc make patch gvim valgrind gdb nodejs 
+sudo http_proxy= pacman -S git gcc make patch gvim valgrind gdb nodejs 
 #
+#pacman -S xf86-video-ati
+#pacman -S xf86-video-vesa
 cd ~
-git clone https://github.com/L3V3L9/dotfiles.git
 ln -s ./dotfiles/.dircolors .dircolors
 ln -s ./dotfiles/.fonts .fonts
 ln -s ./dotfiles/.gitconfig .gitconfig
@@ -19,6 +22,8 @@ ln -s ./dotfiles/.xinitrc .xinitrc
 ln -s ./dotfiles/.xmodmap .xmodmap 
 ln -s ./dotfiles/.Xresources .Xresources 
 ln -s ./dotfiles/.Xresources.colors .Xresources.colors 
+ln -s ./dotfiles/.vim .vim
+ln -s ./dotfiles/.vimrc .vimrc
 #
 mkdir dwm
 cd dwm 
@@ -44,3 +49,5 @@ make
 sudo make install
 #
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+fc-cache -f
+sudo locale-gen
