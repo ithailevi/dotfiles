@@ -1,7 +1,7 @@
 export http_proxy=
 # git clone https://github.com/L3V3L9/dotfiles.git
 # core
-sudo http_proxy= pacman -S tmux xorg-server xorg-xinit xorg-server-utils dwm xterm zsh rxvt-unicode dmenu 
+sudo http_proxy= pacman -S bc tmux xorg-server xorg-xinit xorg-server-utils dwm xterm zsh rxvt-unicode dmenu 
 # apps
 sudo http_proxy= pacman -S chromium mutt ranger openssh cmus cifs-utils alsa-utils unzip mplayer axel htop youtube-viewer cmatrix newsbeuter ntfs-3g wget
 # dev
