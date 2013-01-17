@@ -20,7 +20,7 @@ mbox-hook +INBOX $HOME/inbox.archive
 save-hook .* $HOME/oldmail
 
 # Show hebrew messages through bidiv filter
-set display_filter="/usr/bin/bidiv"
+set display_filter="/usr/bin/fribidi"
 
 source ~/.muttrc.colors
 source ~/.muttrc.addressbook
