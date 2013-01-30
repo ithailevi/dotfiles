@@ -179,3 +179,8 @@ let c_warn_multichar = 1
 let c_warn_digraph = 1
 let c_warn_trigraph = 1
 let c_no_octal = 1
+
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
