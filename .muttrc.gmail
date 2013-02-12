@@ -3,7 +3,8 @@ set imap_user=your.mail@gmail.com
 set smtp_url = "smtp://your.mail@smtp.gmail.com:587/"
 set imap_keepalive=2
 set spoolfile="+INBOX"
-set postponed="+[GMAIL]/Drafts"
+set postponed="+[Gmail]/Drafts"
+
 set header_cache =~/.mutt/cache/headers
 set message_cachedir =~/.mutt/cache/bodies
 set certificate_file =~/.mutt/certificates

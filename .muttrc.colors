@@ -1,32 +1,50 @@
 # bar colors
-color status   black          blue
+color status   blue              default
 # base colors
-color index    brightwhite    black    "~N !~T !~F !~p !~P"
-color index    white          default  "!~N !~T !~F !~p !~P"
+color index    brightwhite       black          "~N !~T !~F !~p !~P"
+color index    white             default        "!~N !~T !~F !~p !~P"
 # regular tagged messages
-color index    black          cyan     "~T !~F !~p !~P"
+color index    black             cyan           "~T !~F !~p !~P"
 # regular flagged messages
-color index    black          red      "~F !~p !~P"
+color index    yellow            default        "~F !~p !~P"
 # messages to me
-color index    white          default  "~p !~N !~T !~F !~P"
-color index    brightgreen    black    "~p ~N !~T !~F !~P"
+color index    white             default        "~p !~N !~T !~F !~P"
+color index    brightgreen       black          "~p ~N !~T !~F !~P"
 # messages just to me
-color index    white          cyan     "~p ~T !~F !~P"
-color index    white          red      "~p ~F !~P"
+color index    brightmagenta     black          "~s 'Keyword.*' ~N !~T !~F !~P"
+color index    brightmagenta     black          "~f Keyword.* ~N !~T !~F !~P"
+
+color index    white             cyan           "~p ~T !~F !~P"
+color index    yellow            default        "~p ~F !~P" #flagged
 # messages from me
-color index    green          default  "~P !~N !~T !~F"
-color index    green          black    "~P ~N !~T !~F"
-color index    green          cyan     "~P ~T !~F"
-color index    green          red      "~P ~F"
+color index    green             default        "~P !~N !~T !~F"
+color index    green             black          "~P ~N !~T !~F"
+color index    green             cyan           "~P ~T !~F"
+color index    yellow            default        "~P ~F" #flagged 
 # big messages
-color index    brightyellow   default  "!~N ~z 102400-"
-color index    brightyellow   cyan     "~T !~F !~p !~P ~z 102400-"
-color index    brightyellow   black    "~N ~z 102400-"
+color index    magenta           default        "!~N ~z 102400-"
+color index    magenta           cyan           "~T !~F !~p !~P ~z 102400-"
+color index    brightmagenta     black          "~N ~z 102400-"
+color index    yellow            default        "~F ~z 102400-" #flagged
 # deleted messages
-color index    red            black    "!~N ~D"
-color index    red            default  "~N ~D"
+color index    red               black          "!~N ~D"
+color index    red               default        "~N ~D"
+# tagged
+color index    black             brightgreen    "!~N ~T"
+color index    black             brightmagenta  "~N ~T"
 # for-future-use
 #color index brightmagenta   black   "~s Regex.* ~N !~T !~F !~P"
 #color index brightmagenta   black   "~f Regex.* ~N !~T !~F !~P"
 #color index brightmagenta   black   "~b Regex.* ~N !~T !~F !~P"
 #color index brightmagenta   black   "~x Regex.* ~N !~T !~F !~P"
+#
+color tree        default        default
+
+color header      brightblue     default "^(From)"
+color header      brightblue     default "^(Subject)"
+color header      brightblue     default "^(Date)"
+color header      brightblue     default "^(CC)"
+color header      brightblue     default "^(To)"
+
+color quoted      brightblack    default
+color attachment  brightblack    default
