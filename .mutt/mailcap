@@ -1,0 +1,6 @@
+# Images
+image/jpg; feh %s
+image/jpeg; feh %s
+image/pjpeg; feh %s
+image/png; feh %s
+image/gif; feh %s
