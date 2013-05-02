@@ -110,6 +110,11 @@ imap § ()<left>
 imap ` _
 imap `` ()<left>
 imap ``` ();<left><left>
+noremap <SPACE>gg G
+noremap <SPACE><SPACE> b~e
+noremap <SPACE>j }
+noremap <SPACE>k {
+
 "
 " Dont allow arrow keys, we are in vim!
 "
@@ -137,6 +142,8 @@ augroup vimrcEx
   autocmd FileType html,javascript,css,cucumber,jade,haml set ai sw=3 sts=3 et
   autocmd FileType python set sw=4 sts=4 et
 
+  autocmd FileType javascript,c,cpp,java inoremap { {<CR>}<Esc>O
+
   autocmd! BufRead,BufNewFile *.sass setfiletype sass 
 
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
@@ -157,7 +164,7 @@ augroup END
 nmap <F8> :TagbarToggle<CR>
 " CTRLP
 let g:ctrlp_working_path_mode = 0
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/vendor/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/vendor/*,*/bin/*
 let g:ctrlp_custom_ignore = 'vendor/bundle'
 let g:ctrlp_custom_ignore = '^vendor'
 let g:ctrlp_custom_ignore = 'vendor/bundle$'
@@ -180,7 +187,6 @@ let c_warn_digraph = 1
 let c_warn_trigraph = 1
 let c_no_octal = 1
 
-inoremap { {<CR>}<Esc>O
 
 
 let g:UltiSnipsExpandTrigger="<tab>"
