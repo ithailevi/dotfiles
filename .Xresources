@@ -13,7 +13,7 @@ URxvt.letterSpace: -1
 URxvt.termName: rxvt-256color
 URxvt.underlineURLs: true
 URxvt.urlLauncher: chromium
-URxvt.perl-ext-common:  default,matcher
+URxvt.perl-ext-common:  default,matcher,font-size
 URxvt.matcher.button:   1 
 !URxvt.perl-lib: /home/username/.urxvt/
 URxvt.perl-ext: selection,mark-yank-urls,font-size
@@ -29,6 +29,11 @@ URxvt.keysym.M-s:           perl:keyboard-select:search
 URxvt.keysym.M-c:   perl:clipboard:copy
 URxvt.keysym.M-v:   perl:clipboard:paste
 URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
 
 URxvt.clipboard.copycmd:  xsel -ib
 URxvt.clipbo ard.pastecmd: xsel -ob
