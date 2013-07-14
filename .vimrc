@@ -36,6 +36,10 @@ set matchpairs+=<:>
 set nofoldenable " Turn off folding 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+" Store temporary files in a central spot
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 " Invisible characters *********************************************************
 set listchars=trail:.,tab:>-,eol:$
 set nolist
@@ -114,6 +118,7 @@ noremap <SPACE>gg G
 noremap <SPACE><SPACE> b~e
 noremap <SPACE>j }
 noremap <SPACE>k {
+noremap - A
 
 "
 " Dont allow arrow keys, we are in vim!
@@ -142,7 +147,7 @@ augroup vimrcEx
   autocmd FileType html,javascript,css,cucumber,jade,haml set ai sw=3 sts=3 et
   autocmd FileType python set sw=4 sts=4 et
 
-  autocmd FileType javascript,c,cpp,java inoremap { {<CR>}<Esc>O
+  "autocmd FileType javascript,c,cpp,java inoremap { {<CR>}<Esc>O
 
   autocmd! BufRead,BufNewFile *.sass setfiletype sass 
 
@@ -150,7 +155,7 @@ augroup vimrcEx
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
 
   " Indent p tags
-  autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
+  "autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
   autocmd BufNewFile,BufRead *.json set ft=javascript
   " Don't syntax highlight markdown because it's often wrong
   autocmd! FileType mkd setlocal syn=off
@@ -187,8 +192,9 @@ let c_warn_digraph = 1
 let c_warn_trigraph = 1
 let c_no_octal = 1
 
-
-
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+let g:EasyMotion_leader_key = '<Space><Space>'
+let delimitMate_expand_cr = 1
